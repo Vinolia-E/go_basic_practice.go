@@ -36,12 +36,18 @@ func PrintNbr(n int) {
 	result := ""
 	neg := ""
 
-	if n < 0 {
-		neg = "-"
-		n *= - 1
-	}
 	if n == 0 {
 		result += "0"
+	}
+
+	if n < 0 {
+		neg = "-"
+		// n *= - 1
+		for n != 0 {
+			mod := (n % 10) * -1
+		result = string(mod+'0') + result
+		n /= 10
+		}
 	}
  	for n > 0 {
 		mod := n % 10
@@ -58,5 +64,6 @@ func main() {
 	PrintNbr(-123)
 	PrintNbr(0)
 	PrintNbr(123)
+	PrintNbr(-9223372036854775808)
 	z01.PrintRune('\n')
 }
