@@ -45,11 +45,11 @@ func PrintNbr(n int) {
 		// n *= - 1
 		for n != 0 {
 			mod := (n % 10) * -1
-		result = string(mod+'0') + result
-		n /= 10
+			result = string(mod+'0') + result
+			n /= 10
 		}
 	}
- 	for n > 0 {
+	for n > 0 {
 		mod := n % 10
 		result = string(mod+'0') + result
 		n /= 10
