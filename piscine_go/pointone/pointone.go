@@ -1,0 +1,46 @@
+// Instructions
+
+//     Write a function that takes a pointer to an int as argument and gives to this int the value of 1.
+
+// Expected function
+
+// func PointOne(n *int) {
+
+// }
+
+// Usage
+
+// Here is a possible program to test your function :
+
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	n := 0
+// 	piscine.PointOne(&n)
+// 	fmt.Println(n)
+// }
+
+// And its output :
+
+// $ go run .
+// 1
+// $
+
+package main
+
+import "fmt"
+
+func PointOne(n *int) {
+	*n =1
+}
+
+func main() {
+	n := 0
+	PointOne(&n)
+	fmt.Println(n)
+}
